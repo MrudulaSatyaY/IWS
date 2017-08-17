@@ -1,0 +1,106 @@
+@import url("http://fonts.googleapis.com/css?family=Ewert");
+@import url("https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display");
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Lora");
+/*** {
+    border: 1px solid red;
+}**/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid{
+    margin: auto;
+}
+.col-2{
+    width : 50%;
+}
+.col-5{
+    width:20%;
+}
+.head-row{
+    width : 100%;
+}
+div.background{
+    background: url(patterns.jpg) ;
+    height: 40%;
+}
+div.transbox{
+    margin: 30px;
+    border: 1px solid black;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+h1 {
+    text-align: center;
+    margin-bottom: -10px;
+    font-family: 'Ewert', cursive;
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+h2 {
+    text-align : right;
+    margin-top: -1px;
+    padding-right: 40px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 32px;
+}
+.heading{
+    width :100%;
+    background: #cce6ff;
+    height: 12%;
+    border-top: 1px #DCDCDC;
+    border-bottom: 1px #DCDCDC;
+    font-size: 24px;
+    text-align : left;
+    padding-left: 10px;
+    margin-top: 1%;
+    font-family: 'Varela Round', sans-serif;
+}
+table {
+    width: 100%;
+    font-family: 'Lora', serif;
+
+}
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 1%;
+    text-align: center;
+}
+th{
+    font-weight: bolder;
+}
+.flexing{
+    display: flex;
+    flex-wrap: wrap;
+}
+.projimg{
+    width: 210px;
+    height: 170px;
+    margin-left: 10%;
+}
+h3{
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+.hobby{
+    display: flex;
+}
+.hobimg{
+    width: 150px;
+    height: 150px;
+    margin-left: 20%;
+}
+.h3hob{
+    margin-left: 20%;
+    margin-top: 10%;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
