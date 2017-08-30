@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHAPES</title>
+    <script type="text/javascript">
+
+        //circle functions definitions
+        function circle(){
+
+                document.getElementById('myCanvas').style.display='block';
+                document.getElementById('inputArea').style.display='block';
+                document.getElementById('submitButton').style.display='block';
+                document.getElementById('area').style.display='block';
+                document.getElementById('perimeter').style.display='block';
+
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                canvas.width = 400;
+                canvas.height = 400;
+                canvas.style.left = "500px";
+                canvas.style.top = "100px";
+                canvas.style.position = "absolute";
+                var centerX = canvas.width/2 ;
+                var centerY = canvas.height/2;
+                var radius = 70;
+
+                context.beginPath();
+                context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+                context.fillStyle = 'green';
+                context.fill();
+                context.lineWidth = 5;
+                context.strokeStyle = '#003300';
+                context.stroke();
+
+                var input_area = document.getElementById('inputArea');
+                var submit_button = document.getElementById('submitButton');
+                input_area.innerHTML = "Radius: <input type='text' id='circle'><br>";
+                submit_button.innerHTML ="<button onclick='calCircle()'>Submit</button>";
+        }
+        function calCircle(){
+                var rad = document.getElementById('circle').value;
+                var area = 3.14*rad*rad;
+                var peri = 2*3.14*rad;
+                var areaDisp = document.getElementById('area');
+                var periDisp = document.getElementById('perimeter');
+                areaDisp.innerHTML = "Area: "+area;
+                periDisp.innerHTML = "Perimeter: "+peri;
+        }
+
+        //square function definition
+        function square(){
+
+                document.getElementById('myCanvas').style.display='block';
+                document.getElementById('inputArea').style.display='block';
+                document.getElementById('submitButton').style.display='block';
+                document.getElementById('area').style.display='block';
+                document.getElementById('perimeter').style.display='block';
+
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                canvas.width = 400;
+                canvas.height = 400;
+                canvas.style.left = "450px";
+                canvas.style.top = "50px";
+                canvas.style.position = "absolute";
+                var centerX = canvas.width/2 ;
+                var centerY = canvas.height/2;
+                var side = 100;
+
+                context.beginPath();
+                context.rect(centerX, centerY, side,side);
+                context.fillStyle = 'green';
+                context.fill();
+                context.lineWidth = 5;
+                context.strokeStyle = '#003300';
+                context.stroke();
+
+                var input_area = document.getElementById('inputArea');
+                var submit_button = document.getElementById('submitButton');
+                input_area.innerHTML = "Side: <input type='text' id='square'><br>";
+                submit_button.innerHTML ="<button onclick='calSquare()'>Submit</button>";
+        }
+        function calSquare(){
+                var side = document.getElementById('square').value;
+                var area = side*side;
+                var peri = 4*side;
+                var areaDisp = document.getElementById('area');
+                var periDisp = document.getElementById('perimeter');
+                areaDisp.innerHTML = "Area: "+area;
+                periDisp.innerHTML = "Perimeter: "+peri;
+        }
+
+        //triangle function definition
+        function triangle(){
+
+                document.getElementById('myCanvas').style.display='block';
+                document.getElementById('inputArea').style.display='block';
+                document.getElementById('submitButton').style.display='block';
+                document.getElementById('area').style.display='block';
+                document.getElementById('perimeter').style.display='block';
+
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                canvas.width = 400;
+                canvas.height = 400;
+                canvas.style.left = "500px";
+                canvas.style.top = "50px";
+                canvas.style.position = "absolute";
+                var centerX = canvas.width/2 ;
+                var centerY = canvas.height/2;
+                var side = 100;
+
+                context.beginPath();
+                context.moveTo(200, 150);
+                context.lineTo(100, 300);
+                context.lineTo(300, 300);
+                context.closePath();
+                context.lineWidth = 5;
+                context.strokeStyle = '#003300';
+                context.fillStyle = "green";
+                context.fill();
+                context.stroke();
+
+                var input_area = document.getElementById('inputArea');
+                var submit_button = document.getElementById('submitButton');
+                input_area.innerHTML = "Side: <input type='text' id='triangle'><br>";
+                submit_button.innerHTML ="<button onclick='calTriangle()'>Submit</button>";
+        }
+        function calTriangle(){
+                var side = document.getElementById('triangle').value;
+                var area = 0.25*side*1.732;
+                var peri = 3*side;
+                var areaDisp = document.getElementById('area');
+                var periDisp = document.getElementById('perimeter');
+                areaDisp.innerHTML = "Area: "+area;
+                periDisp.innerHTML = "Perimeter: "+peri;
+        }
+
+        //rectangle function definitions
+        function rectangle(){
+
+                document.getElementById('myCanvas').style.display='block';
+                document.getElementById('inputArea').style.display='block';
+                document.getElementById('submitButton').style.display='block';
+                document.getElementById('area').style.display='block';
+                document.getElementById('perimeter').style.display='block';
+
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                canvas.width = 400;
+                canvas.height = 400;
+                canvas.style.left = "420px";
+                canvas.style.top = "50px";
+                canvas.style.position = "absolute";
+                var centerX = canvas.width/2 ;
+                var centerY = canvas.height/2;
+                var length = 150;
+                var breadth = 100;
+
+                context.beginPath();
+                context.rect(centerX, centerY, length,breadth);
+                context.fillStyle = 'green';
+                context.fill();
+                context.lineWidth = 5;
+                context.strokeStyle = '#003300';
+                context.stroke();
+
+                var input_area = document.getElementById('inputArea');
+                var submit_button = document.getElementById('submitButton');
+                input_area.innerHTML = "Length: <input type='text' id='length'><br> Breadth: <input type='text' id='breadth'>";
+                submit_button.innerHTML ="<button onclick='calRectangle()'>Submit</button>";
+        }
+        function calRectangle(){
+                var length = document.getElementById('length').value;
+                var breadth = document.getElementById('breadth').value;
+                var area = length*breadth;
+                var peri = 2*(length+breadth);
+                var areaDisp = document.getElementById('area');
+                var periDisp = document.getElementById('perimeter');
+                areaDisp.innerHTML = "Area: "+area;
+                periDisp.innerHTML = "Perimeter: "+peri;
+        }
+
+        //hexagon function definitions
+        function hexagon(){
+
+                document.getElementById('myCanvas').style.display='block';
+                document.getElementById('inputArea').style.display='block';
+                document.getElementById('submitButton').style.display='block';
+                document.getElementById('area').style.display='block';
+                document.getElementById('perimeter').style.display='block';
+
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                canvas.width = 400;
+                canvas.height = 400;
+                canvas.style.left = "550px";
+                canvas.style.top = "170px";
+                canvas.style.position = "absolute";
+                var centerX = canvas.width/2 ;
+                var centerY = canvas.height/2;
+                var length = 150;
+                var breadth = 100;
+
+                context.beginPath();
+                context.moveTo(100,100);
+                context.lineTo(100,150);
+                context.lineTo(150,200);
+                context.lineTo(200,150);
+                context.lineTo(200,100);
+                context.lineTo(150,50);
+                context.closePath();
+                context.fillStyle = 'green';
+                context.fill();
+                context.lineWidth = 5;
+                context.strokeStyle = '#003300';
+                context.stroke();
+
+                var input_area = document.getElementById('inputArea');
+                var submit_button = document.getElementById('submitButton');
+                input_area.innerHTML = "Side: <input type='text' id='side'><br";
+                submit_button.innerHTML ="<button onclick='calHexagon()'>Submit</button>";
+        }
+        function calHexagon(){
+                var side = document.getElementById('side').value;
+                var area = 2.598*side*side;
+                var peri = 6*side;
+                var areaDisp = document.getElementById('area');
+                var periDisp = document.getElementById('perimeter');
+                areaDisp.innerHTML = "Area: "+area;
+                periDisp.innerHTML = "Perimeter: "+peri;
+        }
+    </script>
+</head>
+<body>
+    <button id="buttonCircle" onclick="circle()">Circle</button>
+    <button id="buttonSquare" onclick="square()">Square</button>
+    <button id="buttonTriangle" onclick="triangle()">Triangle</button>
+    <button id="buttonRectangle" onclick="rectangle()">Rectangle</button>
+    <button id="buttonHexagon" onclick="hexagon()">Hexagon</button>
+    <p id="inputArea"></p>
+    <p id="submitButton"></p>
+    <p id="area"></p>
+    <p id="perimeter"></p>
+    <canvas id="myCanvas"></canvas>
+
+</body>
+</html>
