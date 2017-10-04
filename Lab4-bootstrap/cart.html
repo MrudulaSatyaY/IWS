@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div>
+						<a class="navbar-brand" href="#">Women</a>
+					</div>
+					<ul class="nav navbar-nav"">
+							<li><a href="shopping.html">Ethnic Wear</a></li>
+							<li><a href="#">T-Shirts</a></li>
+							<li><a href="#">Blouses</a></li>
+							<li><a href="#">Bottoms</a></li>
+							<li><a href="#">Sweaters</a></li>
+							<li><a href="#">Jackets</a></li>
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Accessories
+  								<span class="caret"></span></button>
+  									<ul class="dropdown-menu">
+									   <li><a href="#">Scarves and Stoles</a></li>
+									   <li class="divider"></li>
+									   <li><a href="#">Caps and Hats</a></li>
+									   <li class="divider"></li>
+									   <li><a href="#">Jewellery</a></li>
+  			  				        </ul>
+							</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li  class="active"><a href="#"><img src="images/bag.png"></span></a></li>
+					</ul>
+				</div>
+			</nav> <!-- nav bar ends -->
+
+			<div class="page-header">
+				<h1><small>Checkout</small></h1>
+			</div>
+			<table class="table table-striped">
+      			<thead class="blue-grey lighten-4">
+              		<tr>
+                  		<th>#</th>
+                  		<th>Product Name</th>
+                  		<th>Product Price</th>
+              		</tr>
+          		</thead>
+          		<tbody>
+          		</tbody>
+      		</table>
+		</div>
+	</body>
+	<script>
+      var url = window.location.href;
+      url = url.split("#")[1];
+      var productArray = url.split(",");
+      if(productArray.length > 0){
+         var total = 0;
+         var table = document.getElementsByClassName("table");
+         table[0].innerHTML = '<thead class=&quot;blue-grey lighten-4&quot;><tr><th>#</th><th>Product Name</th><th>Product Price</th></tr></thead><tbody>';
+         for (var i = 0; i < productArray.length; i++) {
+             if(i == productArray.length - 1){
+                  console.log(i);
+                  table[0].innerHTML+= '<tr><th scope="row"></th><td><h4>Grand Total</h4></td><td><h4>Rs ' + total +'</h3></td></tr>';
+               }
+               else{
+                  var keyvalue = productArray[i].split(":");
+                  total += parseInt(keyvalue[1]);
+                  table[0].innerHTML+= '<tr><th scope="row">'+ (i+1) + '</th><td>' + keyvalue[0] + '</td><td>Rs '+ keyvalue[1] + '</td></tr>';
+               }
+         }
+         table[0].innerHTML+='</tbody>';
+      }
+</script>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div>
+						<a class="navbar-brand" href="#">Women</a>
+					</div>
+					<ul class="nav navbar-nav"">
+							<li><a href="shopping.html">Ethnic Wear</a></li>
+							<li><a href="#">T-Shirts</a></li>
+							<li class="active"><a href="#">Blouses</a></li>
+							<li><a href="#">Bottoms</a></li>
+							<li><a href="#">Sweaters</a></li>
+							<li><a href="#">Jackets</a></li>
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Accessories
+  								<span class="caret"></span></button>
+  									<ul class="dropdown-menu">
+									   <li><a href="#">Scarves and Stoles</a></li>
+									   <li class="divider"></li>
+									   <li><a href="#">Caps and Hats</a></li>
+									   <li class="divider"></li>
+									   <li><a href="#">Jewellery</a></li>
+  			  				        </ul>
+							</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="cart.html" onclick="goToCheckout()" ><img src="images/bag.png"></span></a></li>
+					</ul>
+				</div>
+			</nav> <!-- nav bar ends -->
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				    <li data-target="#myCarousel" data-slide-to="3"></li>
+				    <li data-target="#myCarousel" data-slide-to="4"></li>
+				    <li data-target="#myCarousel" data-slide-to="5"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+				    <div class="item active">
+				      <a href="https://placeholder.com"><img src="http://via.placeholder.com/1200X400"></a>
+				    </div>
+
+				    <div class="item">
+				      <a href="https://placeholder.com"><img src="http://via.placeholder.com/1200X400"></a>
+				    </div>
+
+				    <div class="item">
+				      <a href="https://placeholder.com"><img src="http://via.placeholder.com/1200X400"></a>
+				    </div>
+
+				    <div class="item">
+				      <a href="https://placeholder.com"><img src="http://via.placeholder.com/1200X400"></a>
+				    </div>
+
+				    <div class="item">
+				      <a href="https://placeholder.com"><img src="http://via.placeholder.com/1200X400"></a>
+				    </div>
+
+				    <div class="item">
+				      <a href="https://placeholder.com"><img src="http://via.placeholder.com/1200X400"></a>
+				    </div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+			</div> <!--Carousel ends-->
+
+			<div class="row" id="firstrow">
+			  <div class="col-md-4">
+			    <div class="thumbnail">
+			      <a href="https://placeholder.com"><img src="http://via.placeholder.com/300X300"></a>
+			        <div class="caption" id="photo">
+			          <a href="#" data-toggle="popover" data-trigger="hover" data-original-title="<strong>Total Cost: Rs.780</strong>" data-content="Price: Rs.702 GST: 10%" style="text-decoration:none" data-html="true"><p>Lorem ipsum...</p></a>
+			          <span id="cart_button"><a href="#" onclick="productClick('Lorem ipsum','780')" class="btn">Add to Cart</a></span>
+			        </div>
+			    </div>
+			  </div>
+			  <div class="col-md-4">
+			    <div class="thumbnail">
+			      <a href="https://placeholder.com"><img src="http://via.placeholder.com/300X300"></a>
+			        <div class="caption"id="photo" id="photo">
+			          <a href="#" data-toggle="popover" data-trigger="hover" data-original-title="<strong>Total Cost: Rs.780</strong>" data-content="Price: Rs.702 GST: 10%" style="text-decoration:none" data-html="true"><p>Lorem ipsum...</p></a>
+			          <span id="cart_button"><button>Add to Cart</button></span>
+			        </div>
+			    </div>
+			  </div>
+			  <div class="col-md-4">
+			    <div class="thumbnail">
+			      <a href="https://placeholder.com"><img src="http://via.placeholder.com/300X300"></a>
+			        <div class="caption" id="photo">
+			          <a href="#" data-toggle="popover" data-trigger="hover" data-original-title="<strong>Total Cost: Rs.780</strong>" data-content="Price: Rs.702 GST: 10%" style="text-decoration:none" data-html="true"><p>Lorem ipsum...</p></a>
+			          <span id="cart_button"><button>Add to Cart</button></span>
+			        </div>
+			      </a>
+			    </div>
+			  </div> 
+			</div> <!-- first row of grid ends -->
+
+			<div class="row">
+			  <div class="col-md-4">
+			    <div class="thumbnail">
+			      <a href="https://placeholder.com"><img src="http://via.placeholder.com/300X300"></a>
+			        <div class="caption" id="photo">
+			          <a href="#" data-toggle="popover" data-trigger="hover" data-original-title="<strong>Total Cost: Rs.780</strong>" data-content="Price: Rs.702 GST: 10%" style="text-decoration:none" data-html="true"><p>Lorem ipsum...</p></a>
+			          <span id="cart_button"><button>Add to Cart</button></span>
+			        </div>
+			    </div>
+			  </div>
+			  <div class="col-md-4">
+			    <div class="thumbnail">
+			      <a href="https://placeholder.com"><img src="http://via.placeholder.com/300X300"></a>
+			        <div class="caption" id="photo">
+			          <a href="#" data-toggle="popover" data-trigger="hover" data-original-title="<strong>Total Cost: Rs.780</strong>" data-content="Price: Rs.702 GST: 10%" style="text-decoration:none" data-html="true"><p>Lorem ipsum...</p></a>
+			          <span id="cart_button"><button>Add to Cart</button></span>
+			        </div>
+			    </div>
+			  </div>
+			  <div class="col-md-4">
+			    <div class="thumbnail">
+			      <a href="https://placeholder.com"><img src="http://via.placeholder.com/300X300"></a>
+			        <div class="caption" id="photo">
+			          <a href="#" data-toggle="popover" data-trigger="hover" data-original-title="<strong>Total Cost: Rs.780</strong>" data-content="Price: Rs.702 GST: 10%" style="text-decoration:none" data-html="true"><p>Lorem ipsum...</p></a>
+			          <span id="cart_button"><button>Add to Cart</button></span>
+			        </div>
+			      </a>
+			    </div>
+			  </div>
+			</div> <!-- second grid ends -->
+
+
+		</div> <!-- main container ends -->
+		<script>
+		      var string = "";
+		     
+		      function productClick(name,price){
+		         string += name + ":" + price + ",";
+		         console.log(string);
+		      }
+		      function goToCheckout(){
+		      	console.log("checkout");
+		         if(localStorage.url.includes("cart.html#")){
+		         	console.log("includes");
+		         	localStorage.url+=string;
+		         }
+		         else{
+		         	console.log("else");
+		         	localStorage.url="cart.html#";
+		         	localStorage.url+=string;
+		         }
+		         window.location.replace(localStorage.url);
+		      }
+   		</script>
+		<script>
+			$(document).ready(function(){
+    			$('[data-toggle="popover"]').popover();   
+			});
+		</script>
+	</body>
+</html>
